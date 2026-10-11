@@ -9,11 +9,11 @@ Register with ``builder.add_node("router", router_instance)`` — don't wrap
 it in an extra lambda; a callable instance is a first-class node.
 """
 
-from __future__ import annotations
-
 import hashlib
 import time
 from typing import Optional
+
+from langchain_core.runnables import RunnableConfig
 
 from costrouter.types import (
     BudgetMode,
@@ -92,7 +92,7 @@ class RouterNode:
         self._logger = logger
         self._failure_store = failure_store
 
-    def __call__(self, state: dict, config: Optional["RunnableConfig"] = None) -> dict:
+    def __call__(self, state: dict, config: RunnableConfig | None = None) -> dict:
         """Execute one routing decision.
 
         Reads ``state["step_id"]``, ``state["prompt"]``, and optionally

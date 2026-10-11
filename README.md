@@ -121,10 +121,23 @@ your_expensive_model = LangChainChatModel(ChatOpenAI(model="gpt-4o"))
 
 ### With LangGraph
 
+Declare the state keys with a `TypedDict` so LangGraph merges each node's
+partial update into the state (with `StateGraph(dict)`, each node's return
+value replaces the whole state):
+
 ```python
+from typing import Any, TypedDict
 from langgraph.graph import StateGraph, START, END
 
-builder = StateGraph(dict)
+class State(TypedDict, total=False):
+    step_id: str
+    step_type: str
+    task_id: str
+    prompt: str
+    response: str        # written by RouterNode
+    last_decision: Any   # RoutingDecision, written by RouterNode
+
+builder = StateGraph(State)
 builder.add_node("router", router)
 builder.add_node("downstream", your_downstream_node)
 builder.add_edge(START, "router")
@@ -137,6 +150,7 @@ result = graph.invoke({
     "prompt": "What is the capital of France?",
     "step_type": "qa",
 })
+print(result["response"], result["last_decision"].model_chosen)
 ```
 
 ### Running Benchmarks
