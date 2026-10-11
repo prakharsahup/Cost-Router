@@ -1,0 +1,835 @@
+{
+  "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "version": "2.0",
+  "name": "FunctionalTesting",
+  "url": "https://the-internet.herokuapp.com",
+  "tests": [
+    {
+      "id": "test-001-login-valid",
+      "name": "TC01 - Valid Login",
+      "commands": [
+        {
+          "id": "cmd-0101",
+          "command": "open",
+          "target": "/login",
+          "targets": [],
+          "value": "",
+          "comment": "Navigate to the login page"
+        },
+        {
+          "id": "cmd-0102",
+          "command": "assertTitle",
+          "target": "The Internet",
+          "targets": [],
+          "value": "",
+          "comment": "Verify page title"
+        },
+        {
+          "id": "cmd-0103",
+          "command": "assertElementPresent",
+          "target": "id=username",
+          "targets": [],
+          "value": "",
+          "comment": "Verify username field is present"
+        },
+        {
+          "id": "cmd-0104",
+          "command": "assertElementPresent",
+          "target": "id=password",
+          "targets": [],
+          "value": "",
+          "comment": "Verify password field is present"
+        },
+        {
+          "id": "cmd-0105",
+          "command": "type",
+          "target": "id=username",
+          "targets": [
+            [
+              "id=username",
+              "id"
+            ]
+          ],
+          "value": "tomsmith",
+          "comment": "Enter valid username"
+        },
+        {
+          "id": "cmd-0106",
+          "command": "type",
+          "target": "id=password",
+          "targets": [
+            [
+              "id=password",
+              "id"
+            ]
+          ],
+          "value": "SuperSecretPassword!",
+          "comment": "Enter valid password"
+        },
+        {
+          "id": "cmd-0107",
+          "command": "click",
+          "target": "css=button[type='submit']",
+          "targets": [
+            [
+              "css=button[type='submit']",
+              "css"
+            ]
+          ],
+          "value": "",
+          "comment": "Click the Login button"
+        },
+        {
+          "id": "cmd-0108",
+          "command": "waitForElementVisible",
+          "target": "id=flash",
+          "targets": [],
+          "value": "5000",
+          "comment": "Wait for flash message to appear"
+        },
+        {
+          "id": "cmd-0109",
+          "command": "assertElementPresent",
+          "target": "xpath=//div[@id='flash'][contains(.,'You logged into a secure area!')]",
+          "targets": [],
+          "value": "",
+          "comment": "Verify success flash message"
+        },
+        {
+          "id": "cmd-0110",
+          "command": "assertElementPresent",
+          "target": "css=a[href='/logout']",
+          "targets": [],
+          "value": "",
+          "comment": "Verify Logout button is present on secure page"
+        }
+      ]
+    },
+    {
+      "id": "test-002-login-invalid",
+      "name": "TC02 - Invalid Login",
+      "commands": [
+        {
+          "id": "cmd-0201",
+          "command": "open",
+          "target": "/login",
+          "targets": [],
+          "value": "",
+          "comment": "Navigate to the login page"
+        },
+        {
+          "id": "cmd-0202",
+          "command": "type",
+          "target": "id=username",
+          "targets": [
+            [
+              "id=username",
+              "id"
+            ]
+          ],
+          "value": "invalidUser",
+          "comment": "Enter invalid username"
+        },
+        {
+          "id": "cmd-0203",
+          "command": "type",
+          "target": "id=password",
+          "targets": [
+            [
+              "id=password",
+              "id"
+            ]
+          ],
+          "value": "wrongPassword",
+          "comment": "Enter invalid password"
+        },
+        {
+          "id": "cmd-0204",
+          "command": "click",
+          "target": "css=button[type='submit']",
+          "targets": [
+            [
+              "css=button[type='submit']",
+              "css"
+            ]
+          ],
+          "value": "",
+          "comment": "Click the Login button"
+        },
+        {
+          "id": "cmd-0205",
+          "command": "waitForElementVisible",
+          "target": "id=flash",
+          "targets": [],
+          "value": "5000",
+          "comment": "Wait for error flash message"
+        },
+        {
+          "id": "cmd-0206",
+          "command": "assertElementPresent",
+          "target": "xpath=//div[@id='flash'][contains(.,'Your username is invalid!')]",
+          "targets": [],
+          "value": "",
+          "comment": "Verify error message for invalid credentials"
+        },
+        {
+          "id": "cmd-0207",
+          "command": "assertElementNotPresent",
+          "target": "css=a[href='/logout']",
+          "targets": [],
+          "value": "",
+          "comment": "Verify user is NOT redirected to secure area"
+        }
+      ]
+    },
+    {
+      "id": "test-003-logout",
+      "name": "TC03 - Logout After Login",
+      "commands": [
+        {
+          "id": "cmd-0301",
+          "command": "open",
+          "target": "/login",
+          "targets": [],
+          "value": "",
+          "comment": "Navigate to login page"
+        },
+        {
+          "id": "cmd-0302",
+          "command": "type",
+          "target": "id=username",
+          "targets": [
+            [
+              "id=username",
+              "id"
+            ]
+          ],
+          "value": "tomsmith",
+          "comment": "Enter valid username"
+        },
+        {
+          "id": "cmd-0303",
+          "command": "type",
+          "target": "id=password",
+          "targets": [
+            [
+              "id=password",
+              "id"
+            ]
+          ],
+          "value": "SuperSecretPassword!",
+          "comment": "Enter valid password"
+        },
+        {
+          "id": "cmd-0304",
+          "command": "click",
+          "target": "css=button[type='submit']",
+          "targets": [
+            [
+              "css=button[type='submit']",
+              "css"
+            ]
+          ],
+          "value": "",
+          "comment": "Click Login"
+        },
+        {
+          "id": "cmd-0305",
+          "command": "waitForElementVisible",
+          "target": "css=a[href='/logout']",
+          "targets": [],
+          "value": "5000",
+          "comment": "Wait for Logout button"
+        },
+        {
+          "id": "cmd-0306",
+          "command": "click",
+          "target": "css=a[href='/logout']",
+          "targets": [
+            [
+              "css=a[href='/logout']",
+              "css"
+            ]
+          ],
+          "value": "",
+          "comment": "Click the Logout button"
+        },
+        {
+          "id": "cmd-0307",
+          "command": "waitForElementVisible",
+          "target": "id=flash",
+          "targets": [],
+          "value": "5000",
+          "comment": "Wait for flash message"
+        },
+        {
+          "id": "cmd-0308",
+          "command": "assertElementPresent",
+          "target": "xpath=//div[@id='flash'][contains(.,'You logged out of the secure area!')]",
+          "targets": [],
+          "value": "",
+          "comment": "Verify logout success message"
+        },
+        {
+          "id": "cmd-0309",
+          "command": "assertElementPresent",
+          "target": "id=username",
+          "targets": [],
+          "value": "",
+          "comment": "Verify redirected back to login page"
+        }
+      ]
+    },
+    {
+      "id": "test-004-checkboxes",
+      "name": "TC04 - Checkboxes Toggle",
+      "commands": [
+        {
+          "id": "cmd-0401",
+          "command": "open",
+          "target": "/checkboxes",
+          "targets": [],
+          "value": "",
+          "comment": "Navigate to checkboxes page"
+        },
+        {
+          "id": "cmd-0402",
+          "command": "assertElementPresent",
+          "target": "css=#checkboxes input:nth-child(1)",
+          "targets": [],
+          "value": "",
+          "comment": "Verify first checkbox exists"
+        },
+        {
+          "id": "cmd-0403",
+          "command": "assertElementPresent",
+          "target": "css=#checkboxes input:nth-child(3)",
+          "targets": [],
+          "value": "",
+          "comment": "Verify second checkbox exists"
+        },
+        {
+          "id": "cmd-0404",
+          "command": "assertNotChecked",
+          "target": "css=#checkboxes input:nth-child(1)",
+          "targets": [],
+          "value": "",
+          "comment": "Verify first checkbox is unchecked by default"
+        },
+        {
+          "id": "cmd-0405",
+          "command": "assertChecked",
+          "target": "css=#checkboxes input:nth-child(3)",
+          "targets": [],
+          "value": "",
+          "comment": "Verify second checkbox is checked by default"
+        },
+        {
+          "id": "cmd-0406",
+          "command": "click",
+          "target": "css=#checkboxes input:nth-child(1)",
+          "targets": [],
+          "value": "",
+          "comment": "Toggle first checkbox ON"
+        },
+        {
+          "id": "cmd-0407",
+          "command": "assertChecked",
+          "target": "css=#checkboxes input:nth-child(1)",
+          "targets": [],
+          "value": "",
+          "comment": "Verify first checkbox is now checked"
+        },
+        {
+          "id": "cmd-0408",
+          "command": "click",
+          "target": "css=#checkboxes input:nth-child(3)",
+          "targets": [],
+          "value": "",
+          "comment": "Toggle second checkbox OFF"
+        },
+        {
+          "id": "cmd-0409",
+          "command": "assertNotChecked",
+          "target": "css=#checkboxes input:nth-child(3)",
+          "targets": [],
+          "value": "",
+          "comment": "Verify second checkbox is now unchecked"
+        }
+      ]
+    },
+    {
+      "id": "test-005-dropdown",
+      "name": "TC05 - Dropdown Selection",
+      "commands": [
+        {
+          "id": "cmd-0501",
+          "command": "open",
+          "target": "/dropdown",
+          "targets": [],
+          "value": "",
+          "comment": "Navigate to dropdown page"
+        },
+        {
+          "id": "cmd-0502",
+          "command": "assertElementPresent",
+          "target": "id=dropdown",
+          "targets": [],
+          "value": "",
+          "comment": "Verify dropdown element is present"
+        },
+        {
+          "id": "cmd-0503",
+          "command": "select",
+          "target": "id=dropdown",
+          "targets": [
+            [
+              "id=dropdown",
+              "id"
+            ]
+          ],
+          "value": "label=Option 1",
+          "comment": "Select Option 1 from dropdown"
+        },
+        {
+          "id": "cmd-0504",
+          "command": "assertSelectedValue",
+          "target": "id=dropdown",
+          "targets": [],
+          "value": "1",
+          "comment": "Verify Option 1 is selected (value=1)"
+        },
+        {
+          "id": "cmd-0505",
+          "command": "select",
+          "target": "id=dropdown",
+          "targets": [
+            [
+              "id=dropdown",
+              "id"
+            ]
+          ],
+          "value": "label=Option 2",
+          "comment": "Select Option 2 from dropdown"
+        },
+        {
+          "id": "cmd-0506",
+          "command": "assertSelectedValue",
+          "target": "id=dropdown",
+          "targets": [],
+          "value": "2",
+          "comment": "Verify Option 2 is selected (value=2)"
+        },
+        {
+          "id": "cmd-0507",
+          "command": "assertSelectedLabel",
+          "target": "id=dropdown",
+          "targets": [],
+          "value": "Option 2",
+          "comment": "Verify the visible label is Option 2"
+        }
+      ]
+    },
+    {
+      "id": "test-006-add-remove-elements",
+      "name": "TC06 - Add/Remove Elements",
+      "commands": [
+        {
+          "id": "cmd-0601",
+          "command": "open",
+          "target": "/add_remove_elements/",
+          "targets": [],
+          "value": "",
+          "comment": "Navigate to Add/Remove Elements page"
+        },
+        {
+          "id": "cmd-0602",
+          "command": "assertText",
+          "target": "css=h3",
+          "targets": [],
+          "value": "Add/Remove Elements",
+          "comment": "Verify page heading"
+        },
+        {
+          "id": "cmd-0603",
+          "command": "click",
+          "target": "css=button[onclick='addElement()']",
+          "targets": [],
+          "value": "",
+          "comment": "Click Add Element button"
+        },
+        {
+          "id": "cmd-0604",
+          "command": "assertElementPresent",
+          "target": "css=#elements .added-manually",
+          "targets": [],
+          "value": "",
+          "comment": "Verify a Delete button appeared"
+        },
+        {
+          "id": "cmd-0605",
+          "command": "click",
+          "target": "css=button[onclick='addElement()']",
+          "targets": [],
+          "value": "",
+          "comment": "Click Add Element button again"
+        },
+        {
+          "id": "cmd-0606",
+          "command": "assertElementPresent",
+          "target": "css=#elements .added-manually:nth-child(2)",
+          "targets": [],
+          "value": "",
+          "comment": "Verify second Delete button appeared"
+        },
+        {
+          "id": "cmd-0607",
+          "command": "click",
+          "target": "css=#elements .added-manually:nth-child(1)",
+          "targets": [],
+          "value": "",
+          "comment": "Click first Delete button"
+        },
+        {
+          "id": "cmd-0608",
+          "command": "executeScript",
+          "target": "return document.querySelectorAll('#elements .added-manually').length",
+          "targets": [],
+          "value": "deleteCount",
+          "comment": "Count remaining delete buttons via JS"
+        },
+        {
+          "id": "cmd-0609",
+          "command": "assert",
+          "target": "deleteCount",
+          "targets": [],
+          "value": "1",
+          "comment": "Verify only one Delete button remains"
+        }
+      ]
+    },
+    {
+      "id": "test-007-javascript-alerts",
+      "name": "TC07 - JavaScript Alerts",
+      "commands": [
+        {
+          "id": "cmd-0701",
+          "command": "open",
+          "target": "/javascript_alerts",
+          "targets": [],
+          "value": "",
+          "comment": "Navigate to JavaScript Alerts page"
+        },
+        {
+          "id": "cmd-0702",
+          "command": "assertText",
+          "target": "css=h3",
+          "targets": [],
+          "value": "JavaScript Alerts",
+          "comment": "Verify page heading"
+        },
+        {
+          "id": "cmd-0703",
+          "command": "executeScript",
+          "target": "window.alert = () => true",
+          "targets": [],
+          "value": "",
+          "comment": "Mock alert to auto-accept"
+        },
+        {
+          "id": "cmd-0704",
+          "command": "click",
+          "target": "css=button[onclick='jsAlert()']",
+          "targets": [],
+          "value": "",
+          "comment": "Click JS Alert button"
+        },
+        {
+          "id": "cmd-0705",
+          "command": "assertText",
+          "target": "id=result",
+          "targets": [],
+          "value": "You successfully clicked an alert",
+          "comment": "Verify result text after alert"
+        },
+        {
+          "id": "cmd-0706",
+          "command": "executeScript",
+          "target": "window.confirm = () => true",
+          "targets": [],
+          "value": "",
+          "comment": "Mock confirm to return true (Ok)"
+        },
+        {
+          "id": "cmd-0707",
+          "command": "click",
+          "target": "css=button[onclick='jsConfirm()']",
+          "targets": [],
+          "value": "",
+          "comment": "Click JS Confirm button"
+        },
+        {
+          "id": "cmd-0708",
+          "command": "assertText",
+          "target": "id=result",
+          "targets": [],
+          "value": "You clicked: Ok",
+          "comment": "Verify result after accepting confirmation"
+        },
+        {
+          "id": "cmd-0709",
+          "command": "executeScript",
+          "target": "window.prompt = () => 'Selenium Test Input'",
+          "targets": [],
+          "value": "",
+          "comment": "Mock prompt to return test input"
+        },
+        {
+          "id": "cmd-0710",
+          "command": "click",
+          "target": "css=button[onclick='jsPrompt()']",
+          "targets": [],
+          "value": "",
+          "comment": "Click JS Prompt button"
+        },
+        {
+          "id": "cmd-0711",
+          "command": "assertText",
+          "target": "id=result",
+          "targets": [],
+          "value": "You entered: Selenium Test Input",
+          "comment": "Verify result shows entered prompt text"
+        }
+      ]
+    },
+    {
+      "id": "test-008-hover",
+      "name": "TC08 - Hover Actions",
+      "commands": [
+        {
+          "id": "cmd-0801",
+          "command": "open",
+          "target": "/hovers",
+          "targets": [],
+          "value": "",
+          "comment": "Navigate to Hovers page"
+        },
+        {
+          "id": "cmd-0802",
+          "command": "assertText",
+          "target": "css=h3",
+          "targets": [],
+          "value": "Hovers",
+          "comment": "Verify page heading"
+        },
+        {
+          "id": "cmd-0803",
+          "command": "mouseOver",
+          "target": "css=.figure:nth-child(3)",
+          "targets": [],
+          "value": "",
+          "comment": "Hover over the first user avatar"
+        },
+        {
+          "id": "cmd-0804",
+          "command": "assertText",
+          "target": "css=.figure:nth-child(3) .figcaption h5",
+          "targets": [],
+          "value": "name: user1",
+          "comment": "Verify tooltip shows user1 name"
+        },
+        {
+          "id": "cmd-0805",
+          "command": "mouseOver",
+          "target": "css=.figure:nth-child(4)",
+          "targets": [],
+          "value": "",
+          "comment": "Hover over the second user avatar"
+        },
+        {
+          "id": "cmd-0806",
+          "command": "assertText",
+          "target": "css=.figure:nth-child(4) .figcaption h5",
+          "targets": [],
+          "value": "name: user2",
+          "comment": "Verify tooltip shows user2 name"
+        },
+        {
+          "id": "cmd-0807",
+          "command": "mouseOver",
+          "target": "css=.figure:nth-child(5)",
+          "targets": [],
+          "value": "",
+          "comment": "Hover over the third user avatar"
+        },
+        {
+          "id": "cmd-0808",
+          "command": "assertText",
+          "target": "css=.figure:nth-child(5) .figcaption h5",
+          "targets": [],
+          "value": "name: user3",
+          "comment": "Verify tooltip shows user3 name"
+        }
+      ]
+    },
+    {
+      "id": "test-009-dynamic-loading",
+      "name": "TC09 - Dynamic Loading (Hidden Element)",
+      "commands": [
+        {
+          "id": "cmd-0901",
+          "command": "open",
+          "target": "/dynamic_loading/1",
+          "targets": [],
+          "value": "",
+          "comment": "Navigate to Dynamic Loading page (hidden element)"
+        },
+        {
+          "id": "cmd-0902",
+          "command": "assertText",
+          "target": "css=h3",
+          "targets": [],
+          "value": "Dynamically Loaded Page Elements",
+          "comment": "Verify page heading"
+        },
+        {
+          "id": "cmd-0903",
+          "command": "assertElementPresent",
+          "target": "css=#start button",
+          "targets": [],
+          "value": "",
+          "comment": "Verify Start button is present before loading"
+        },
+        {
+          "id": "cmd-0904",
+          "command": "click",
+          "target": "css=#start button",
+          "targets": [],
+          "value": "",
+          "comment": "Click Start button to begin loading"
+        },
+        {
+          "id": "cmd-0905",
+          "command": "waitForElementVisible",
+          "target": "id=finish",
+          "targets": [],
+          "value": "10000",
+          "comment": "Wait for the hidden element to become visible"
+        },
+        {
+          "id": "cmd-0906",
+          "command": "assertText",
+          "target": "css=#finish h4",
+          "targets": [],
+          "value": "Hello World!",
+          "comment": "Verify the dynamically loaded text"
+        }
+      ]
+    },
+    {
+      "id": "test-010-key-presses",
+      "name": "TC10 - Key Press Events",
+      "commands": [
+        {
+          "id": "cmd-1001",
+          "command": "open",
+          "target": "/key_presses",
+          "targets": [],
+          "value": "",
+          "comment": "Navigate to Key Presses page"
+        },
+        {
+          "id": "cmd-1002",
+          "command": "assertText",
+          "target": "css=h3",
+          "targets": [],
+          "value": "Key Presses",
+          "comment": "Verify page heading"
+        },
+        {
+          "id": "cmd-1003",
+          "command": "click",
+          "target": "id=target",
+          "targets": [],
+          "value": "",
+          "comment": "Focus on the input field"
+        },
+        {
+          "id": "cmd-1004",
+          "command": "sendKeys",
+          "target": "id=target",
+          "targets": [],
+          "value": "a",
+          "comment": "Press the 'A' key"
+        },
+        {
+          "id": "cmd-1005",
+          "command": "assertText",
+          "target": "id=result",
+          "targets": [],
+          "value": "You entered: A",
+          "comment": "Verify key press result for 'A'"
+        },
+        {
+          "id": "cmd-1006",
+          "command": "sendKeys",
+          "target": "id=target",
+          "targets": [],
+          "value": "b",
+          "comment": "Press the 'B' key"
+        },
+        {
+          "id": "cmd-1007",
+          "command": "assertText",
+          "target": "id=result",
+          "targets": [],
+          "value": "You entered: B",
+          "comment": "Verify key press result for 'B'"
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "suite-001-auth",
+      "name": "Authentication Tests",
+      "persistSession": false,
+      "parallel": false,
+      "timeout": 30,
+      "tests": [
+        "test-001-login-valid",
+        "test-002-login-invalid",
+        "test-003-logout"
+      ]
+    },
+    {
+      "id": "suite-002-ui",
+      "name": "UI Interaction Tests",
+      "persistSession": false,
+      "parallel": false,
+      "timeout": 30,
+      "tests": [
+        "test-004-checkboxes",
+        "test-005-dropdown",
+        "test-006-add-remove-elements"
+      ]
+    },
+    {
+      "id": "suite-003-advanced",
+      "name": "Advanced Interaction Tests",
+      "persistSession": false,
+      "parallel": false,
+      "timeout": 30,
+      "tests": [
+        "test-007-javascript-alerts",
+        "test-008-hover",
+        "test-009-dynamic-loading",
+        "test-010-key-presses"
+      ]
+    }
+  ],
+  "urls": [
+    "https://the-internet.herokuapp.com"
+  ],
+  "plugins": []
+}

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "costrouter"
+version = "1.0.0"
+description = "Cost-aware LLM routing for LangGraph agents"
+requires-python = ">=3.10"
+# Pinned to the tested minor version: LangGraph moves fast (see plan §7).
+dependencies = [
+    "langgraph>=1.2.11,<1.3",
+    "langchain-core>=1.6,<2",
+]
+
+[project.optional-dependencies]
+# Real-model benchmark runs (benchmark/run.py, benchmark/download_data.py)
+benchmark = ["openai>=1.40", "python-dotenv>=1.0", "pandas>=2.0", "pyarrow>=14"]
+dashboard = ["streamlit>=1.50", "plotly>=5.0", "pandas>=2.0"]
+report = ["matplotlib>=3.7", "pandas>=2.0", "nbconvert>=7", "ipykernel>=6"]
+dev = ["pytest", "pytest-mock"]
+
+[tool.setuptools.packages.find]
+# Only the library is installed; benchmark/ and dashboard/ run from the repo.
+include = ["costrouter*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

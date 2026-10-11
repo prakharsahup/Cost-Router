@@ -1,0 +1,201 @@
+run,task_id,dataset,model,correct,graded_span,gold
+always_cheap,triviaqa-42,triviaqa,cheap,1,The Roman Forum.,Forum | The Forum (disambiguation) | Fori | The Forum | Fora
+always_cheap,triviaqa-41,triviaqa,cheap,1,a well,"a Well | The Well (album) | The Well (disambiguation) | The Well | Well, The"
+always_cheap,gsm8k-41,gsm8k,cheap,1,60**,60
+always_cheap,triviaqa-9,triviaqa,cheap,1,Syria,Syria | الجمهورية العربية السورية | Amorrhitis | سوريا | Sport in Syria
+always_cheap,gsm8k-15,gsm8k,cheap,1,123**,123
+always_cheap,gsm8k-0,gsm8k,cheap,1,18**,18
+always_cheap,triviaqa-1,triviaqa,cheap,1,Al Capone,Al Capone | Alfonse %22Scarface%22 Capone | CaPone | Alphonse Gabriel %22Al%22 Capone | Mae Capone
+always_cheap,gsm8k-20,gsm8k,cheap,1,11050**,11050
+always_cheap,triviaqa-15,triviaqa,cheap,1,Khaki.,Khaki | Kackeys | Kackey pants | Khakis | Khaki (colour)
+always_cheap,gsm8k-28,gsm8k,cheap,1,7.00**,7
+always_cheap,gsm8k-23,gsm8k,cheap,1,273**,273
+always_cheap,triviaqa-10,triviaqa,cheap,1,high-performance racing seats.,Seats | Seat | Seat base | SEATS
+always_cheap,gsm8k-5,gsm8k,cheap,1,8000**,8000
+always_cheap,gsm8k-6,gsm8k,cheap,1,32,32
+always_cheap,gsm8k-22,gsm8k,cheap,1,5**,5
+always_cheap,triviaqa-45,triviaqa,cheap,0,Rugby league,RUGBY SEVENS | Borders Game | 7-a-side | Rugby seven | Sevens rugby
+always_cheap,triviaqa-48,triviaqa,cheap,1,Peter Parker,Peter Parker | Wall Crawler | Spider man | Peter Parker (fiction) | Web Head
+always_cheap,gsm8k-42,gsm8k,cheap,1,25**,25
+always_cheap,gsm8k-26,gsm8k,cheap,1,21**,21
+always_cheap,triviaqa-37,triviaqa,cheap,1,Battle of the Somme,BATTLE OF THE SOMME | Battle of the somme | Battle Of The Somme | Battle of Somme | Battle of the Somme (1916)
+always_cheap,triviaqa-30,triviaqa,cheap,1,Chiricahua Apache,Apache | Apache Nation | Apche indian tribe | ˀa˙paču | Apacheans
+always_cheap,triviaqa-21,triviaqa,cheap,1,Titus,Titus | Roman Emperor Titus | Titus (emperor) | Titus Vespasianus | Roman emperor Titus
+always_cheap,triviaqa-32,triviaqa,,0,,Third Party Fire and Theft
+always_cheap,gsm8k-46,gsm8k,cheap,1,15**,15
+always_cheap,gsm8k-30,gsm8k,cheap,1,50**,50
+always_cheap,triviaqa-49,triviaqa,cheap,1,the assassination of President John F. Kennedy.,JFK Assassination | Shooting of John F. Kennedy | Dealey Plaza shootings | President Kennedy's assassination | J.F.K assassination
+always_cheap,gsm8k-33,gsm8k,cheap,1,38**,38
+always_cheap,triviaqa-26,triviaqa,cheap,1,Medellín,"Medellín | Medillan | Medellin (Colombia) | Medellin | Medellin, Colombia"
+always_cheap,gsm8k-37,gsm8k,cheap,1,90**,90
+always_cheap,triviaqa-33,triviaqa,cheap,0,Sir William Temple,Adam Smith | Vile maxim | A Smith | Adam smith
+always_cheap,triviaqa-8,triviaqa,,0,,FUNNY GIRL | Funny Girl | Funny Girl (disambiguation)
+always_cheap,triviaqa-47,triviaqa,cheap,1,Table tennis,Table tennis | Ping-pang Ch'iu | Ping pong ball | Corbillon cup | Pen-holders
+always_cheap,gsm8k-9,gsm8k,cheap,1,5**,5
+always_cheap,gsm8k-13,gsm8k,,0,,192
+always_cheap,gsm8k-24,gsm8k,cheap,1,50**,50
+always_cheap,triviaqa-44,triviaqa,cheap,1,iron,Iron | Iron (element) | Iron rope | Iron truss | Ed-In-Sol
+always_cheap,gsm8k-48,gsm8k,cheap,1,84**,84
+always_cheap,gsm8k-2,gsm8k,cheap,1,40**,40
+always_cheap,gsm8k-35,gsm8k,cheap,1,80**,80
+always_cheap,triviaqa-12,triviaqa,cheap,1,Nemesis,Nemesis | Arch nemesis | Nemesis (video game) | Nemesis (band) | Nemeses
+always_cheap,triviaqa-36,triviaqa,cheap,0,the ninth month.,Third | Third (music) (disambiguation) | 3rd | 0.33 | 3rd (album)
+always_cheap,triviaqa-23,triviaqa,cheap,0,Nottingham,Doncaster/Sheffield
+always_cheap,triviaqa-39,triviaqa,cheap,1,cat,Cat | Housecat | Felis Silvestris Catus | Cats have 9 lives | Moggies
+always_cheap,triviaqa-40,triviaqa,cheap,1,International Committee of the Red Cross,The Red Cross | Red Cross (disambiguation) | Red cross (disambiguation)
+always_cheap,triviaqa-18,triviaqa,cheap,1,New Haven,"New Haven | UN/LOCODE:USHVN | Roodenburg | New Haven (CT) | New Haven,CT"
+always_cheap,gsm8k-16,gsm8k,cheap,1,14**,14
+always_cheap,gsm8k-11,gsm8k,cheap,1,145**,145
+always_cheap,gsm8k-10,gsm8k,cheap,1,320**,320
+always_cheap,triviaqa-7,triviaqa,,0,,LLANBERIS | Llan beris | Llanberis
+always_cheap,triviaqa-34,triviaqa,cheap,1,King George IV,"King George IV | George, Prince Regent | King George IV of the United Kingdom | George the Fourth | George IV of Great Britain"
+always_cheap,gsm8k-49,gsm8k,cheap,0,2180,2280
+always_cheap,triviaqa-46,triviaqa,cheap,1,cents,CENTS | Cent (area) | Cent (disambiguation) | Cents | Cent (measure)
+always_cheap,triviaqa-2,triviaqa,cheap,1,Yellow,Yellow | Yellowest | Whiteyellow | Yelow | Yellow color
+always_cheap,gsm8k-1,gsm8k,cheap,1,5**,5
+always_cheap,triviaqa-16,triviaqa,,0,,Who Wants To Be a Millionaire?
+always_cheap,triviaqa-38,triviaqa,cheap,1,Lady Bracknell,LADY BRACKNELL | Algernon Moncrieff | Bunburyist | Importance of being earnest | The Importance of Being Earnest
+always_cheap,gsm8k-8,gsm8k,cheap,1,34**,34
+always_cheap,gsm8k-18,gsm8k,cheap,1,98**,98
+always_cheap,triviaqa-22,triviaqa,,0,,National Space Centre | The National Space Centre | National Space Centre of England | Leicester Space Centre
+always_cheap,gsm8k-12,gsm8k,cheap,1,1**,1
+always_cheap,triviaqa-24,triviaqa,cheap,0,The Fog,Rats | 🐀 | Species of rat | Ratus (genus) | Rattus rattus domesticus
+always_cheap,triviaqa-5,triviaqa,cheap,1,The Great Train Robbery.,Great Train Robbery | The Great Train Robbery (movie) | The Great Train Robbery (disambiguation) | The Great Train Robbery (1903 movie) | The Great Train Robbery (film)
+always_cheap,triviaqa-6,triviaqa,cheap,1,face,Face | Human Face | Facial feature | Faces | Human faces
+always_cheap,gsm8k-17,gsm8k,cheap,1,2000**,2000
+always_cheap,gsm8k-32,gsm8k,cheap,1,276**,276
+always_cheap,triviaqa-19,triviaqa,cheap,1,IJsselmeer,Ijsselmeer | IJselmeer | Lake ijssel | Ijselmeer | IJsselmeer
+always_cheap,gsm8k-29,gsm8k,cheap,1,145**,145
+always_cheap,triviaqa-43,triviaqa,cheap,1,King Arthur,King Arthur | Arthurian legend | King Arthur's family tree | Arthur Pendragon | Arthur Legend
+always_cheap,gsm8k-40,gsm8k,cheap,1,30**,30
+always_cheap,triviaqa-20,triviaqa,cheap,1,Bugs Bunny,BUGS BUNNY | Bugs' Bunny | Warner Bros. Experimental Rabbit | Happy Rabbit | Evolution of Bugs Bunny
+always_cheap,triviaqa-0,triviaqa,cheap,1,St. Basil's Cathedral,St. Basil's | Cathedral of the Intercession | Pokhrovsky Cathedral | Pokhrovsky cathedral | St. Basil's Cathedral
+always_cheap,gsm8k-45,gsm8k,cheap,1,29**,29
+always_cheap,gsm8k-7,gsm8k,cheap,1,122**,122
+always_cheap,gsm8k-43,gsm8k,cheap,1,93**,93
+always_cheap,gsm8k-3,gsm8k,cheap,1,1430**,1430
+always_cheap,gsm8k-39,gsm8k,cheap,1,66,66
+always_cheap,triviaqa-25,triviaqa,cheap,1,Victoria,VICTORIA | CIVI-TV | A Victoria | A-Channel Vancouver Island | A-Victoria
+always_cheap,gsm8k-21,gsm8k,cheap,1,45**,45
+always_cheap,gsm8k-34,gsm8k,cheap,1,1520**,1520
+always_cheap,gsm8k-27,gsm8k,cheap,1,10**,10
+always_cheap,gsm8k-14,gsm8k,cheap,1,21,21
+always_cheap,triviaqa-29,triviaqa,cheap,1,violin,Violin | Violinist (disambiguation) | Violina | Geige | FiddleandViolin
+always_cheap,triviaqa-27,triviaqa,,0,,'CRIMSON TIDE' | Crimson Tide | The Crimson Tide | Crimson Tide (disambiguation)
+always_cheap,gsm8k-38,gsm8k,cheap,1,280**,280
+always_cheap,gsm8k-47,gsm8k,cheap,1,84,84
+always_cheap,triviaqa-4,triviaqa,cheap,0,a rabbit,Hedgehog | Domestic Hedgehog | Hedgepig | Erinaceinae | Hedge hog
+always_cheap,gsm8k-4,gsm8k,cheap,1,36**,36
+always_cheap,gsm8k-25,gsm8k,cheap,1,12,12
+always_cheap,triviaqa-11,triviaqa,cheap,1,poker,Poker | Poker books | Rules of poker | Straight poker | Home Poker
+always_cheap,gsm8k-19,gsm8k,cheap,1,5,5
+always_cheap,gsm8k-36,gsm8k,cheap,1,23**,23
+always_cheap,triviaqa-13,triviaqa,cheap,1,Sugarloaf Mountain (Pão de Açúcar),"SUGAR LOAF | Sugarloaf | Sugarloaf Mountain, Ireland | Sugar loaf | Sugarloaf Mountain Rd."
+always_cheap,triviaqa-17,triviaqa,cheap,0,smoking,Tobacco or alcohol
+always_cheap,triviaqa-28,triviaqa,cheap,1,Squadron Leader,Squadron Leader | Squadron leader/page history | Squadron Officer | Squadron leader | Acting Squadron Leader
+always_cheap,triviaqa-31,triviaqa,cheap,1,Belfast,"Belfast | Strandtown Primary School | St. Michael's Primary School, Belfast | Finaghy primary school | List of primary schools in Belfast"
+always_cheap,triviaqa-35,triviaqa,cheap,1,British Airways,British Airways | Ba.com | British Airlines | British Airways Plc | Flight Information and Control of Operations
+always_cheap,gsm8k-44,gsm8k,cheap,1,40000**,"40,000"
+always_cheap,triviaqa-3,triviaqa,cheap,0,KH,K | 🄚 | 🄺 | ⒦ | Kay (letter)
+always_cheap,triviaqa-14,triviaqa,cheap,1,E,E | ⒠ | Ｅ | 🄔 | 🅴
+always_cheap,gsm8k-31,gsm8k,cheap,1,50**,50
+always_expensive,triviaqa-42,triviaqa,expensive,1,Roman Forum,Forum | The Forum (disambiguation) | Fori | The Forum | Fora
+always_expensive,triviaqa-41,triviaqa,expensive,1,a well,"a Well | The Well (album) | The Well (disambiguation) | The Well | Well, The"
+always_expensive,gsm8k-41,gsm8k,expensive,1,60**,60
+always_expensive,triviaqa-9,triviaqa,expensive,1,Syria,Syria | الجمهورية العربية السورية | Amorrhitis | سوريا | Sport in Syria
+always_expensive,gsm8k-15,gsm8k,expensive,1,123,123
+always_expensive,gsm8k-0,gsm8k,expensive,1,18**,18
+always_expensive,triviaqa-1,triviaqa,expensive,0,George “Machine Gun” Kelly,Al Capone | Alfonse %22Scarface%22 Capone | CaPone | Alphonse Gabriel %22Al%22 Capone | Mae Capone
+always_expensive,gsm8k-20,gsm8k,expensive,1,11050**,11050
+always_expensive,triviaqa-15,triviaqa,expensive,0,the pith helmet,Khaki | Kackeys | Kackey pants | Khakis | Khaki (colour)
+always_expensive,gsm8k-28,gsm8k,expensive,1,7.00**,7
+always_expensive,gsm8k-23,gsm8k,expensive,1,273**,273
+always_expensive,triviaqa-10,triviaqa,expensive,1,high‑performance automotive (racing) seats,Seats | Seat | Seat base | SEATS
+always_expensive,gsm8k-5,gsm8k,expensive,1,8000**,8000
+always_expensive,gsm8k-6,gsm8k,expensive,1,32**,32
+always_expensive,gsm8k-22,gsm8k,expensive,1,5**,5
+always_expensive,triviaqa-45,triviaqa,expensive,1,Rugby sevens,RUGBY SEVENS | Borders Game | 7-a-side | Rugby seven | Sevens rugby
+always_expensive,triviaqa-48,triviaqa,expensive,1,Peter Parker,Peter Parker | Wall Crawler | Spider man | Peter Parker (fiction) | Web Head
+always_expensive,gsm8k-42,gsm8k,expensive,1,25**,25
+always_expensive,gsm8k-26,gsm8k,expensive,1,21**,21
+always_expensive,triviaqa-37,triviaqa,expensive,1,Battle of the Somme,BATTLE OF THE SOMME | Battle of the somme | Battle Of The Somme | Battle of Somme | Battle of the Somme (1916)
+always_expensive,triviaqa-30,triviaqa,expensive,1,Apache,Apache | Apache Nation | Apche indian tribe | ˀa˙paču | Apacheans
+always_expensive,triviaqa-21,triviaqa,expensive,1,Titus,Titus | Roman Emperor Titus | Titus (emperor) | Titus Vespasianus | Roman emperor Titus
+always_expensive,triviaqa-32,triviaqa,expensive,1,"Third Party, Fire and Theft",Third Party Fire and Theft
+always_expensive,gsm8k-46,gsm8k,expensive,1,15**,15
+always_expensive,gsm8k-30,gsm8k,expensive,1,50**,50
+always_expensive,triviaqa-49,triviaqa,expensive,1,the assassination of President John F. Kennedy,JFK Assassination | Shooting of John F. Kennedy | Dealey Plaza shootings | President Kennedy's assassination | J.F.K assassination
+always_expensive,gsm8k-33,gsm8k,expensive,1,38**,38
+always_expensive,triviaqa-26,triviaqa,expensive,1,Medellín,"Medellín | Medillan | Medellin (Colombia) | Medellin | Medellin, Colombia"
+always_expensive,gsm8k-37,gsm8k,expensive,1,90**,90
+always_expensive,triviaqa-33,triviaqa,expensive,0,Napoleon Bonaparte,Adam Smith | Vile maxim | A Smith | Adam smith
+always_expensive,triviaqa-8,triviaqa,expensive,0,Ziegfeld Follies,FUNNY GIRL | Funny Girl | Funny Girl (disambiguation)
+always_expensive,triviaqa-47,triviaqa,expensive,1,Table tennis,Table tennis | Ping-pang Ch'iu | Ping pong ball | Corbillon cup | Pen-holders
+always_expensive,gsm8k-9,gsm8k,expensive,1,5**,5
+always_expensive,gsm8k-13,gsm8k,expensive,0,176**,192
+always_expensive,gsm8k-24,gsm8k,expensive,1,50**,50
+always_expensive,triviaqa-44,triviaqa,expensive,1,iron,Iron | Iron (element) | Iron rope | Iron truss | Ed-In-Sol
+always_expensive,gsm8k-48,gsm8k,expensive,1,84**,84
+always_expensive,gsm8k-2,gsm8k,expensive,1,40**,40
+always_expensive,gsm8k-35,gsm8k,expensive,1,80**,80
+always_expensive,triviaqa-12,triviaqa,expensive,1,Nemesis,Nemesis | Arch nemesis | Nemesis (video game) | Nemesis (band) | Nemeses
+always_expensive,triviaqa-36,triviaqa,expensive,1,third,Third | Third (music) (disambiguation) | 3rd | 0.33 | 3rd (album)
+always_expensive,triviaqa-23,triviaqa,expensive,0,Sheffield,Doncaster/Sheffield
+always_expensive,triviaqa-39,triviaqa,expensive,1,cat,Cat | Housecat | Felis Silvestris Catus | Cats have 9 lives | Moggies
+always_expensive,triviaqa-40,triviaqa,expensive,1,International Committee of the Red Cross,The Red Cross | Red Cross (disambiguation) | Red cross (disambiguation)
+always_expensive,triviaqa-18,triviaqa,expensive,1,New Haven,"New Haven | UN/LOCODE:USHVN | Roodenburg | New Haven (CT) | New Haven,CT"
+always_expensive,gsm8k-16,gsm8k,expensive,1,14**,14
+always_expensive,gsm8k-11,gsm8k,expensive,1,145**.,145
+always_expensive,gsm8k-10,gsm8k,expensive,1,320**,320
+always_expensive,triviaqa-7,triviaqa,expensive,0,Bala,LLANBERIS | Llan beris | Llanberis
+always_expensive,triviaqa-34,triviaqa,expensive,1,King George IV,"King George IV | George, Prince Regent | King George IV of the United Kingdom | George the Fourth | George IV of Great Britain"
+always_expensive,gsm8k-49,gsm8k,expensive,0,2180**,2280
+always_expensive,triviaqa-46,triviaqa,expensive,1,cents,CENTS | Cent (area) | Cent (disambiguation) | Cents | Cent (measure)
+always_expensive,triviaqa-2,triviaqa,expensive,1,yellow,Yellow | Yellowest | Whiteyellow | Yelow | Yellow color
+always_expensive,gsm8k-1,gsm8k,expensive,1,5.,5
+always_expensive,triviaqa-16,triviaqa,expensive,1,Who Wants to Be a Millionaire?,Who Wants To Be a Millionaire?
+always_expensive,triviaqa-38,triviaqa,expensive,1,Jack Worthing (the character also known as Ernest),LADY BRACKNELL | Algernon Moncrieff | Bunburyist | Importance of being earnest | The Importance of Being Earnest
+always_expensive,gsm8k-8,gsm8k,expensive,1,34**,34
+always_expensive,gsm8k-18,gsm8k,expensive,1,98**,98
+always_expensive,triviaqa-22,triviaqa,expensive,1,National Space Centre,National Space Centre | The National Space Centre | National Space Centre of England | Leicester Space Centre
+always_expensive,gsm8k-12,gsm8k,expensive,1,1**,1
+always_expensive,triviaqa-24,triviaqa,expensive,1,The Rats,Rats | 🐀 | Species of rat | Ratus (genus) | Rattus rattus domesticus
+always_expensive,triviaqa-5,triviaqa,expensive,1,The Great Train Robbery.,Great Train Robbery | The Great Train Robbery (movie) | The Great Train Robbery (disambiguation) | The Great Train Robbery (1903 movie) | The Great Train Robbery (film)
+always_expensive,triviaqa-6,triviaqa,expensive,1,face,Face | Human Face | Facial feature | Faces | Human faces
+always_expensive,gsm8k-17,gsm8k,expensive,1,2000**.,2000
+always_expensive,gsm8k-32,gsm8k,expensive,1,276**,276
+always_expensive,triviaqa-19,triviaqa,expensive,1,IJsselmeer,Ijsselmeer | IJselmeer | Lake ijssel | Ijselmeer | IJsselmeer
+always_expensive,gsm8k-29,gsm8k,expensive,1,145**,145
+always_expensive,triviaqa-43,triviaqa,expensive,1,King Arthur,King Arthur | Arthurian legend | King Arthur's family tree | Arthur Pendragon | Arthur Legend
+always_expensive,gsm8k-40,gsm8k,expensive,1,30**,30
+always_expensive,triviaqa-20,triviaqa,expensive,1,Bugs Bunny,BUGS BUNNY | Bugs' Bunny | Warner Bros. Experimental Rabbit | Happy Rabbit | Evolution of Bugs Bunny
+always_expensive,triviaqa-0,triviaqa,expensive,1,St. Basil's Cathedral,St. Basil's | Cathedral of the Intercession | Pokhrovsky Cathedral | Pokhrovsky cathedral | St. Basil's Cathedral
+always_expensive,gsm8k-45,gsm8k,expensive,1,29**,29
+always_expensive,gsm8k-7,gsm8k,expensive,1,122**,122
+always_expensive,gsm8k-43,gsm8k,expensive,1,93**,93
+always_expensive,gsm8k-3,gsm8k,expensive,1,1430,1430
+always_expensive,gsm8k-39,gsm8k,expensive,1,66,66
+always_expensive,triviaqa-25,triviaqa,expensive,1,Victoria,VICTORIA | CIVI-TV | A Victoria | A-Channel Vancouver Island | A-Victoria
+always_expensive,gsm8k-21,gsm8k,expensive,1,45**,45
+always_expensive,gsm8k-34,gsm8k,expensive,1,1520**,1520
+always_expensive,gsm8k-27,gsm8k,expensive,1,10**,10
+always_expensive,gsm8k-14,gsm8k,expensive,1,21**,21
+always_expensive,triviaqa-29,triviaqa,expensive,1,violin,Violin | Violinist (disambiguation) | Violina | Geige | FiddleandViolin
+always_expensive,triviaqa-27,triviaqa,expensive,1,Crimson Tide,'CRIMSON TIDE' | Crimson Tide | The Crimson Tide | Crimson Tide (disambiguation)
+always_expensive,gsm8k-38,gsm8k,expensive,1,280**,280
+always_expensive,gsm8k-47,gsm8k,expensive,1,84**,84
+always_expensive,triviaqa-4,triviaqa,expensive,0,Yona is a rabbit (specifically a doe).,Hedgehog | Domestic Hedgehog | Hedgepig | Erinaceinae | Hedge hog
+always_expensive,gsm8k-4,gsm8k,expensive,1,36**,36
+always_expensive,gsm8k-25,gsm8k,expensive,1,12**,12
+always_expensive,triviaqa-11,triviaqa,expensive,1,poker,Poker | Poker books | Rules of poker | Straight poker | Home Poker
+always_expensive,gsm8k-19,gsm8k,expensive,1,5**,5
+always_expensive,gsm8k-36,gsm8k,expensive,1,23**,23
+always_expensive,triviaqa-13,triviaqa,expensive,1,Sugarloaf Mountain,"SUGAR LOAF | Sugarloaf | Sugarloaf Mountain, Ireland | Sugar loaf | Sugarloaf Mountain Rd."
+always_expensive,triviaqa-17,triviaqa,expensive,0,smoking,Tobacco or alcohol
+always_expensive,triviaqa-28,triviaqa,expensive,1,Squadron Leader,Squadron Leader | Squadron leader/page history | Squadron Officer | Squadron leader | Acting Squadron Leader
+always_expensive,triviaqa-31,triviaqa,expensive,1,Belfast,"Belfast | Strandtown Primary School | St. Michael's Primary School, Belfast | Finaghy primary school | List of primary schools in Belfast"
+always_expensive,triviaqa-35,triviaqa,expensive,1,British Airways,British Airways | Ba.com | British Airlines | British Airways Plc | Flight Information and Control of Operations
+always_expensive,gsm8k-44,gsm8k,expensive,1,40000**,"40,000"
+always_expensive,triviaqa-3,triviaqa,expensive,0,KH,K | 🄚 | 🄺 | ⒦ | Kay (letter)
+always_expensive,triviaqa-14,triviaqa,expensive,1,E,E | ⒠ | Ｅ | 🄔 | 🅴
+always_expensive,gsm8k-31,gsm8k,expensive,1,50**,50

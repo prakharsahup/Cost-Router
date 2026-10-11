@@ -1,0 +1,18 @@
+# CostRouter
+.env
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+*.db
+*.db-wal
+*.db-shm
+.pytest_cache/
+
+# Generated test/benchmark artifacts
+*.jtl
+*.log
+results/
+jmeter/results/
+jmeter/reports/

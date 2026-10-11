@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "provider": "groq",
+    "cheap_model": "openai/gpt-oss-20b",
+    "expensive_model": "openai/gpt-oss-120b",
+    "rates_usd_per_1m": {
+      "cheap": [
+        0.075,
+        0.3
+      ],
+      "expensive": [
+        0.15,
+        0.6
+      ]
+    },
+    "temperature": 0.0,
+    "n_per_dataset": 50,
+    "sweep_thresholds": [
+      0.0262,
+      0.0289,
+      0.039,
+      0.0532,
+      0.065
+    ],
+    "validator": "has_final_answer",
+    "max_tokens": 1024,
+    "seed": 42,
+    "tasks": 100,
+    "budget_cap_usd": 0.006716,
+    "db": "costrouter.db"
+  },
+  "runs": [
+    {
+      "run_id": "always_cheap-mixed",
+      "condition": "always_cheap",
+      "label": "always_cheap",
+      "threshold": null,
+      "budget_usd": 10.0,
+      "accuracy": 0.84,
+      "total_cost": 0.009429149999997891,
+      "correct_count": 84,
+      "total_count": 100,
+      "errors": 7,
+      "expensive_share": 0.0,
+      "retries": 0,
+      "budget_forced": 0,
+      "accuracy_by_dataset": {
+        "gsm8k": 0.96,
+        "triviaqa": 0.72
+      }
+    },
+    {
+      "run_id": "always_expensive-mixed",
+      "condition": "always_expensive",
+      "label": "always_expensive",
+      "threshold": null,
+      "budget_usd": 10.0,
+      "accuracy": 0.89,
+      "total_cost": 0.013431899999999995,
+      "correct_count": 89,
+      "total_count": 100,
+      "errors": 0,
+      "expensive_share": 1.0,
+      "retries": 0,
+      "budget_forced": 0,
+      "accuracy_by_dataset": {
+        "gsm8k": 0.96,
+        "triviaqa": 0.82
+      }
+    },
+    {
+      "run_id": "router-t0.0262-mixed",
+      "condition": "router",
+      "label": "router t=0.0262",
+      "threshold": 0.0262,
+      "budget_usd": 10.0,
+      "accuracy": 0.88,
+      "total_cost": 0.013683149999999996,
+      "correct_count": 88,
+      "total_count": 100,
+      "errors": 0,
+      "expensive_share": 0.98,
+      "retries": 1,
+      "budget_forced": 0,
+      "accuracy_by_dataset": {
+        "gsm8k": 0.96,
+        "triviaqa": 0.8
+      }
+    },
+    {
+      "run_id": "router-t0.0289-mixed",
+      "condition": "router",
+      "label": "router t=0.0289",
+      "threshold": 0.0289,
+      "budget_usd": 10.0,
+      "accuracy": 0.88,
+      "total_cost": 0.013651949999999996,
+      "correct_count": 88,
+      "total_count": 100,
+      "errors": 0,
+      "expensive_share": 0.97,
+      "retries": 1,
+      "budget_forced": 0,
+      "accuracy_by_dataset": {
+        "gsm8k": 0.96,
+        "triviaqa": 0.8
+      }
+    },
+    {
+      "run_id": "router-t0.039-mixed",
+      "condition": "router",
+      "label": "router t=0.039",
+      "threshold": 0.039,
+      "budget_usd": 10.0,
+      "accuracy": 0.88,
+      "total_cost": 0.012831224999999995,
+      "correct_count": 88,
+      "total_count": 100,
+      "errors": 0,
+      "expensive_share": 0.8,
+      "retries": 1,
+      "budget_forced": 0,
+      "accuracy_by_dataset": {
+        "gsm8k": 0.96,
+        "triviaqa": 0.8
+      }
+    },
+    {
+      "run_id": "router-t0.0532-mixed",
+      "condition": "router",
+      "label": "router t=0.0532",
+      "threshold": 0.0532,
+      "budget_usd": 10.0,
+      "accuracy": 0.87,
+      "total_cost": 0.013137074999999996,
+      "correct_count": 87,
+      "total_count": 100,
+      "errors": 0,
+      "expensive_share": 0.71,
+      "retries": 3,
+      "budget_forced": 0,
+      "accuracy_by_dataset": {
+        "gsm8k": 0.96,
+        "triviaqa": 0.78
+      }
+    },
+    {
+      "run_id": "router-t0.065-mixed",
+      "condition": "router",
+      "label": "router t=0.065",
+      "threshold": 0.065,
+      "budget_usd": 10.0,
+      "accuracy": 0.87,
+      "total_cost": 0.012442649999999998,
+      "correct_count": 87,
+      "total_count": 100,
+      "errors": 0,
+      "expensive_share": 0.53,
+      "retries": 4,
+      "budget_forced": 0,
+      "accuracy_by_dataset": {
+        "gsm8k": 0.96,
+        "triviaqa": 0.78
+      }
+    },
+    {
+      "run_id": "router-t0.0262-budgetcap-mixed",
+      "condition": "router",
+      "label": "router t=0.0262 capped $0.006716 soft",
+      "threshold": 0.0262,
+      "budget_usd": 0.006716,
+      "accuracy": 0.84,
+      "total_cost": 0.011271450000000004,
+      "correct_count": 84,
+      "total_count": 100,
+      "errors": 4,
+      "expensive_share": 0.4583333333333333,
+      "retries": 1,
+      "budget_forced": 50,
+      "accuracy_by_dataset": {
+        "gsm8k": 0.96,
+        "triviaqa": 0.72
+      }
+    },
+    {
+      "run_id": "router-t0.0262-budgetcap-hardstop-mixed",
+      "condition": "router",
+      "label": "router t=0.0262 capped $0.006716 hard",
+      "threshold": 0.0262,
+      "budget_usd": 0.006716,
+      "accuracy": 0.4,
+      "total_cost": 0.006418425,
+      "correct_count": 40,
+      "total_count": 100,
+      "errors": 53,
+      "expensive_share": 0.9361702127659575,
+      "retries": 1,
+      "budget_forced": 1,
+      "accuracy_by_dataset": {
+        "gsm8k": 0.44,
+        "triviaqa": 0.36
+      }
+    }
+  ]
+}
