@@ -231,6 +231,15 @@ read-only; pass `-- --db other.db` or set `COSTROUTER_DB_PATH` to use another.
 `.streamlit/config.toml` binds it to `localhost`; remove `address` to share it
 on your network.
 
+Screenshots (also handy as slides if the live demo can't run):
+[Overview](docs/screenshots/overview.png) ·
+[Live Router](docs/screenshots/live.png) ·
+[Playground](docs/screenshots/playground.png) ·
+[Results](docs/screenshots/results.png) ·
+[Budget Safety](docs/screenshots/budget.png)
+
+![Live Router](docs/screenshots/live.png)
+
 **A 5-minute demo:** *Overview* (the problem and the flow) → *Live Router*:
 "Capital of Australia" (cheap), "Cheapest way to buy 22 pens" (expensive),
 "UK quiz-show trivia" (cheap answer empty → retry-escalate), then set the budget
