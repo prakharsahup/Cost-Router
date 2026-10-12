@@ -186,3 +186,21 @@ class TestCueSaturation:
         """'Compare' alone must not cross the default 0.5 threshold."""
         est = HeuristicDifficultyEstimator(FailureRateStore())
         assert est.estimate("Compare", step_type="d").score <= 0.5
+
+
+class TestExplain:
+    def test_explain_matches_estimate_and_sums_contributions(self):
+        store = FailureRateStore(prior=0.5, min_samples=5)
+        est = HeuristicDifficultyEstimator(store)
+        prompt = "Solve this step by step and justify the answer. " * 3
+        info = est.explain(prompt, "math")
+        assert info["score"] == est.estimate(prompt, "math").score
+        assert abs(sum(info["contributions"].values()) - info["score"]) < 1e-12
+        assert info["matched_cues"] == ["justify", "solve", "step by step"]
+        assert info["signals"]["history"] == 0.5  # cold-start prior
+
+    def test_observations_counts_records(self):
+        store = FailureRateStore()
+        store.record("qa", failed=True)
+        store.record("qa", failed=False)
+        assert store.observations("qa") == 2 and store.observations("other") == 0

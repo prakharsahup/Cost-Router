@@ -78,6 +78,10 @@ class FailureRateStore:
             return self._prior
         return f / total
 
+    def observations(self, step_type: str) -> int:
+        """Number of outcomes recorded for *step_type*."""
+        return sum(self._counts.get(step_type, (0, 0)))
+
     def record(self, step_type: str, *, failed: bool) -> None:
         """Record an observation for *step_type*."""
         s, f = self._counts.get(step_type, (0, 0))
@@ -120,21 +124,32 @@ class HeuristicDifficultyEstimator(DifficultyEstimator):
         self._w_len, self._w_cue, self._w_hist = weights
         self._length_norm_chars = length_norm_chars
 
+    def explain(self, prompt: str, step_type: str) -> dict:
+        """Break the score into its signals, for audit and display.
+
+        Returns each signal's raw value in [0, 1], its weight, and its
+        weighted contribution, plus the matched cue words and the final
+        clamped ``score`` (identical to ``estimate(...).score``).
+        """
+        distinct_cues = sorted({m.lower() for m in REASONING_CUES.findall(prompt)})
+        signals = {
+            "length": min(len(prompt) / self._length_norm_chars, 1.0),
+            "cues": min(len(distinct_cues) / CUE_SATURATION, 1.0),
+            "history": self._store.failure_rate(step_type),
+        }
+        weights = {"length": self._w_len, "cues": self._w_cue, "history": self._w_hist}
+        contributions = {k: weights[k] * v for k, v in signals.items()}
+        return {
+            "signals": signals,
+            "weights": weights,
+            "contributions": contributions,
+            "matched_cues": distinct_cues,
+            "score": max(0.0, min(sum(contributions.values()), 1.0)),
+        }
+
     def estimate(self, prompt: str, step_type: str) -> DifficultyEstimate:
         """Score *prompt* using length, reasoning cues, and history."""
         t0 = time.perf_counter()
-
-        len_score = min(len(prompt) / self._length_norm_chars, 1.0)
-        distinct_cues = {m.lower() for m in REASONING_CUES.findall(prompt)}
-        cue_score = min(len(distinct_cues) / CUE_SATURATION, 1.0)
-        hist_score = self._store.failure_rate(step_type)
-
-        raw = (
-            self._w_len * len_score
-            + self._w_cue * cue_score
-            + self._w_hist * hist_score
-        )
-        score = max(0.0, min(raw, 1.0))
-
+        score = self.explain(prompt, step_type)["score"]
         latency_ms = (time.perf_counter() - t0) * 1000
         return DifficultyEstimate(score=score, latency_ms=latency_ms)

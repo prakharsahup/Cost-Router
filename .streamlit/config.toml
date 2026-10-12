@@ -1,0 +1,17 @@
+# Dashboard theme: high-contrast dark, sized for projectors.
+[theme]
+base = "dark"
+primaryColor = "#4f8cff"
+backgroundColor = "#0b1020"
+secondaryBackgroundColor = "#141b2f"
+textColor = "#e8ecf6"
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+# Only this machine can open the dashboard. Remove to share it on your LAN.
+address = "localhost"
+
+[browser]
+gatherUsageStats = false

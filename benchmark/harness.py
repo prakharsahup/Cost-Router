@@ -215,6 +215,7 @@ def run_condition(
             "model_chosen": decision.model_chosen.value if decision else None,
             "difficulty_score": decision.difficulty_score if decision else None,
             "retried": decision.retried if decision else False,
+            "budget_forced": decision.budget_forced if decision else False,
             "answer": model_answer,
             "error": error,
         })

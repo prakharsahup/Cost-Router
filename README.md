@@ -204,15 +204,39 @@ sweep = run_policy_sweep(
 )
 ```
 
-### Viewing Results
+### Dashboard
 
 ```bash
-streamlit run dashboard/app.py -- --db costrouter.db
+python -m benchmark.run --offline --fresh   # build costrouter.db (once; no API key needed)
+streamlit run dashboard/app.py              # opens http://localhost:8501
 ```
 
-The dashboard opens the database read-only. Without `--db` it uses
-`COSTROUTER_DB_PATH`, then `./costrouter.db`. The database isn't committed;
-`python -m benchmark.run --offline --fresh` rebuilds it from the response cache.
+A dark, projector-sized app with six pages:
+
+| Page | What it shows |
+|---|---|
+| **Overview** | What CostRouter does, the 5-step request flow, headline results |
+| **Live Router** | Route a question through the real `RouterNode` and watch each step: difficulty score (and why), budget check, model, validation / retry-escalate, cost. Budget and failure history carry across questions; threshold, budget and HARD_STOP are adjustable |
+| **Playground** | Drag the threshold / budget cap; all 100 benchmark tasks are replayed through the router in ~20 ms from the recorded answers, with your point on the Pareto chart and a per-task grid |
+| **Results** | Pareto chart, full results table, accuracy by task type, where the expensive calls went |
+| **Budget Safety** | SOFT vs HARD_STOP under the same cap, step by step |
+| **Audit Log** | Every routing decision for any run, downloadable as CSV |
+
+The preset questions in **Live Router** are answered from committed caches
+(`data/response_cache/`), so the demo works with no network. Typed questions
+call the provider live when `GROQ_API_KEY` is in `.env`; those answers are
+cached in `results/live_cache.jsonl` (git-ignored). Re-record the presets with
+`python -m dashboard.engine --prewarm`. The dashboard opens the database
+read-only; pass `-- --db other.db` or set `COSTROUTER_DB_PATH` to use another.
+`.streamlit/config.toml` binds it to `localhost`; remove `address` to share it
+on your network.
+
+**A 5-minute demo:** *Overview* (the problem and the flow) → *Live Router*:
+"Capital of Australia" (cheap), "Cheapest way to buy 22 pens" (expensive),
+"UK quiz-show trivia" (cheap answer empty → retry-escalate), then set the budget
+to $0.0005 and ask the pens question again (budget-forced) → *Playground*: drag
+the threshold from 0 to 0.25 and watch cost fall while accuracy holds →
+*Budget Safety*: SOFT overspends, HARD_STOP holds the cap.
 
 ## Benchmark results
 
