@@ -291,6 +291,23 @@ thresholds are noise. To reproduce without an API key:
 `python -m benchmark.run --offline --fresh` replays the committed response cache into
 `costrouter.db`; then `streamlit run dashboard/app.py`.
 
+## Presentation
+
+[`docs/CostRouter_Presentation.pptx`](docs/CostRouter_Presentation.pptx) — a
+12-slide PowerPoint deck explaining the project (problem, architecture,
+routing flow, budget safety, benchmark results, live demo, lessons), with
+native charts, diagrams and speaker notes. Rebuild it from the benchmark data:
+
+```bash
+cd docs/presentation
+python extract_data.py          # numbers from costrouter.db -> deck_data.json
+npm install && node build_deck.js
+```
+
+`build_deck.js` uses `apply_theme.js` from the Anthropic `pptx` skill; set
+`PPTX_SKILL_DIR` to that skill's directory and `NODE_PATH` to
+`docs/presentation/node_modules`.
+
 ## Configuration
 
 ### RouterConfig

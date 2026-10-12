@@ -1,0 +1,12 @@
+{
+  "name": "costrouter-deck",
+  "private": true,
+  "description": "Builds docs/CostRouter_Presentation.pptx (run: npm install && node build_deck.js)",
+  "dependencies": {
+    "pptxgenjs": "^4.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.4.0",
+    "sharp": "^0.33.5"
+  }
+}
